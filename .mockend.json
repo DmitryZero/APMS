@@ -42,6 +42,39 @@
                 "CURATOR",
                 "ADMIN"
             ]
+        },
+        "userProjects": {
+            "hasMany": "Project"
+        }
+    },
+    "Project": {
+        "project_title": {
+            "string": {}
+        },
+        "information": {
+            "loremSentences": {
+                "minLength": 100,
+                "maxLength": 200
+            }
+        },
+        "status": {
+            "string": [
+                "IN_PROCESS",
+                "FROZEN",
+                "DONE"
+            ]
+        },
+        "captain": {
+            "belongsTo": "User"
+        },
+        "project_manager": {
+            "belongsTo": "User"
+        },
+        "consultants_list": {
+            "hasMany": "User"
+        },
+        "member_list": {
+            "hasMany": "User"
         }
     }
 }
