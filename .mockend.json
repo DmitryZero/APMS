@@ -42,9 +42,6 @@
                 "CURATOR",
                 "ADMIN"
             ]
-        },
-        "userProjects": {
-            "hasMany": "Project"
         }
     },
     "Project": {
@@ -63,18 +60,6 @@
                 "FROZEN",
                 "DONE"
             ]
-        },
-        "captain": {
-            "belongsTo": "User"
-        },
-        "project_manager": {
-            "belongsTo": "User"
-        },
-        "consultants_list": {
-            "hasMany": "User"
-        },
-        "member_list": {
-            "hasMany": "User"
         }
     }
 }
